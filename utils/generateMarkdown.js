@@ -24,7 +24,10 @@ function renderLicenseLink(license) {
     return `https://creativecommons.org/licenses/by-nd/4.0` 
   }
   if (license === 'BSD') {
-    return ``
+    return `https://opensource.org/licenses/BSD-3-Clause`
+  }
+  if (license === 'N/A') {
+    return `N'A`
   }
 }
 
@@ -40,17 +43,30 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-
-  ${renderLicenseBadge(data.licenses)}
+  return `# ${data.Title}
 
   ## Table of Contents
+  *[License](#licenses)
+  *[Description](#description)
+  *[Question](#questions)
+  *[Credits](#credits)
+  
+
+  ${renderLicenseBadge(data.licenses)}
 
 
   ## Description
   ${data.description}
 
-  ## Installation
+  ## Questions
+  Do you have questions about this project?
+  contact me!
+  Github: https://github.com/${data.username}
+  Email: ${data.email}
+
+  ## Credits
+  ${data.name}
 `;
 }
 
+module.exports = generateMarkdown;
