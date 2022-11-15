@@ -23,7 +23,7 @@ const questions = [
     type: 'list',
     name: 'licenses',
     message: 'Choose a Liscense: ',
-    choices: ['MIT', 'GPL', 'BSD', 'CC--0']
+    choices: ['MIT', 'GPL', 'BSD', 'CC--0', 'N/A']
   },
   {
     type: 'input',
@@ -32,7 +32,7 @@ const questions = [
   },
   {
     type: 'input',
-    name: 'name',
+    name: 'email',
     message: 'What is your e-mail adress?'
   },
 ];
@@ -41,7 +41,7 @@ const questions = [
 const writeToFile = data => {
   return new Promise((resolve, reject) => {
       // make a readme file and add to dist folder
-      fs.writeFile('./dist/README.md', data, err => {
+      fs.writeFile('README.md', data, err => {
           // if there's an error, reject the Promise and send the error to .catch() method
           if (err) {
               reject (err);
@@ -51,7 +51,7 @@ const writeToFile = data => {
           // if everything went well, resolve the Promise and send the successful data to the .then() method
           resolve({
               ok: true,
-              message: console.log('Success! Navigate to the "dist" folder to see your README!')
+              message: console.log('Awesome! you just made a professional README file.')
           });
       })
   })
