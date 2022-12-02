@@ -1,10 +1,10 @@
 # Generate README file
 
   ## Table of Contents
-  *[License](#licenses)
-  *[Description](#description)
-  *[Question](#questions)
-  *[Credits](#credits)
+  - [License](#licenses)
+  - [Description](#description)
+  - [Question](#questions)
+  - [Credits](#credits)
   
 
   [![N/A license](https://img.shields.io/badge/License-N/A-blue.svg)](N'A)
